@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+
+    namespace 'net.micode.notes'
+
+    compileSdkVersion 30
+
+    buildToolsVersion "31.0.0"
+
+    defaultConfig {
+        applicationId "net.micode.notes"
+
+        minSdkVersion 14
+
+        //noinspection ExpiredTargetSdkVersion
+
+        targetSdkVersion 29
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+
+        }
+
+    }
+
+}
